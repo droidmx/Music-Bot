@@ -1,4 +1,4 @@
-exports.TOKEN = '';
+
 
 exports.PREFIX = '!';
 

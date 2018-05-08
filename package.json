@@ -17,7 +17,11 @@
     "discord.js": "^11.1.0",
     "opusscript": "0.0.3",
     "simple-youtube-api": "^3.0.0",
-    "ytdl-core": "^0.16.0"
+    "ytdl-core": "^0.16.0",
+    "ffmpeg": "0.0.4",
+        "ffmpeg-binaries": "^3.2.2-3",
+        "ffmpeg.js": "^3.1.9001",
+"node-fetch": "^2.0.0",
   },
   "devDependencies": {
     "eslint": "^4.0.0",

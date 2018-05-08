@@ -4,8 +4,8 @@
   "description": "A simple discord bot",
   "main": "MusicBot.js",
   "scripts": {
-    "test": ""
-  },
+    "start": "node MusicBot.js"
+},
   "keywords": [
     "discord",
     "bot",

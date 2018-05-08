@@ -21,7 +21,7 @@
     "ffmpeg": "0.0.4",
         "ffmpeg-binaries": "^3.2.2-3",
         "ffmpeg.js": "^3.1.9001",
-"node-fetch": "^2.0.0",
+"node-fetch": "^2.0.0"
   },
   "devDependencies": {
     "eslint": "^4.0.0",

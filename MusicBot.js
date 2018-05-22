@@ -143,7 +143,7 @@ ${serverQueue.songs.map(song => `**-** ${song.title}`).join('\n')}
 		return msg.channel.send('There is nothing playing.');
 	}
 
-	return undefined;
+	
 });
 
 async function handleVideo(video, msg, voiceChannel, playlist = false) {

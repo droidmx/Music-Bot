@@ -16,7 +16,7 @@ client.on('error', console.error);
 client.on('ready', () => {
 	console.log('Yo this ready!')
 console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setPresence({ stream: { name: `some tunes! | >help`, type: 0 }});
+  client.user.setPresence({ game: { name: `some tunes! | >help`, type: 0 }});
 });
 
 client.on('disconnect', () => console.log('I just disconnected, making sure you know, I will reconnect now...'));

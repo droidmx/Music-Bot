@@ -16,7 +16,7 @@ client.on('error', console.error);
 client.on('ready', () => {
 	console.log('Yo this ready!')
 console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setPresence({ game: { name: `some tunes! | >help`, type: 0 }});
+  client.user.setPresence({ stream: { name: `some tunes! | >help`, type: 0 }});
 });
 
 client.on('disconnect', () => console.log('I just disconnected, making sure you know, I will reconnect now...'));
@@ -26,7 +26,7 @@ client.on('reconnecting', () => console.log('I am reconnecting now!'));
 client.on('message', async msg => { // eslint-disable-line
 	if (msg.author.bot) return undefined;
 	if (!msg.content.startsWith(PREFIX)) return undefined;
-if (msg.content.startsWith(prefix + 'help')) {
+if (msg.content.startsWith(PREFIX + 'help')) {
   msg.channel.send(":inbox_tray: | Listed below are some commands")
   msg.channel.send(`\`\`\`asciidoc
 = Music =

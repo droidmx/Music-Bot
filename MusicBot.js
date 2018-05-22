@@ -13,7 +13,11 @@ client.on('warn', console.warn);
 
 client.on('error', console.error);
 
-client.on('ready', () => console.log('Yo this ready!'));
+client.on('ready', () => {
+	console.log('Yo this ready!')
+console.log(`Logged in as ${client.user.tag}!`);
+  client.user.setPresence({ game: { name: `some tunes! | >help`, type: 0 }});
+});
 
 client.on('disconnect', () => console.log('I just disconnected, making sure you know, I will reconnect now...'));
 
@@ -22,7 +26,16 @@ client.on('reconnecting', () => console.log('I am reconnecting now!'));
 client.on('message', async msg => { // eslint-disable-line
 	if (msg.author.bot) return undefined;
 	if (!msg.content.startsWith(PREFIX)) return undefined;
-
+if (msg.content.startsWith(prefix + 'help')) {
+  msg.channel.send(":inbox_tray: | Listed below are some commands")
+  msg.channel.send(`\`\`\`asciidoc
+= Music =
+>>play <song name> :: Plays a song in the voice channel you are in
+skip :: Skips song
+stop :: Stops song
+volume :: Can set volume
+np :: shows song now playing\`\`\``)
+}
 	const args = msg.content.split(' ');
 	const searchString = args.slice(1).join(' ');
 	const url = args[1] ? args[1].replace(/<(.+)>/g, '$1') : '';

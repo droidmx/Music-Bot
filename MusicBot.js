@@ -101,13 +101,13 @@ Please provide a value to select one of the search results ranging from 1-10.
 		if (!msg.member.voiceChannel) return msg.channel.send('You are not in a voice channel!');
 		if (!serverQueue) return msg.channel.send('There is nothing playing that I could skip for you.');
 		serverQueue.connection.dispatcher.end('Skip command has been used!');
-		return undefined;
+		return;
 	} else if (command === 'stop') {
 		if (!msg.member.voiceChannel) return msg.channel.send('You are not in a voice channel!');
 		if (!serverQueue) return msg.channel.send('There is nothing playing that I could stop for you.');
 		serverQueue.songs = [];
 		serverQueue.connection.dispatcher.end('Stop command has been used!');
-		return undefined;
+		return;
 	} else if (command === 'volume') {
 		if (!msg.member.voiceChannel) return msg.channel.send('You are not in a voice channel!');
 		if (!serverQueue) return msg.channel.send('There is nothing playing.');
@@ -179,10 +179,10 @@ async function handleVideo(video, msg, voiceChannel, playlist = false) {
 	} else {
 		serverQueue.songs.push(song);
 		console.log(serverQueue.songs);
-		if (playlist) return undefined;
+		if (playlist) return console.error('testing');
 		else return msg.channel.send(`✅ **${song.title}** has been added to the queue!`);
 	}
-	return undefined;
+	
 }
 
 function play(guild, song) {

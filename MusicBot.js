@@ -30,7 +30,7 @@ if (msg.content.startsWith(PREFIX + 'help')) {
   msg.channel.send(":inbox_tray: | Listed below are some commands")
   msg.channel.send(`\`\`\`asciidoc
 = Music =
->>play <song name> :: Plays a song in the voice channel you are in
+>play <song name> :: Plays a song in the voice channel you are in
 skip :: Skips song
 stop :: Stops song
 volume :: Can set volume
